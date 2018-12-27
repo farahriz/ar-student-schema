@@ -5,7 +5,7 @@ class Student < ActiveRecord::Base
 	validates :age, numericality: {greater_than: 5}
 	validates :phone, length: {minimum: 10}
 
-	belongs_to :teacher
+	has_and_belongs_to_many :teachers, join_table: "student_teachers"
 
 	def name
 		p "#{self.first_name} #{self.last_name}"

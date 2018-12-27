@@ -33,3 +33,11 @@ def seed_students
 end
 
 # seed_students
+
+def assign_teachers_to_students
+	all_students = Student.all 
+
+	all_students.each do |current_student|
+		current_student.update(teacher_id: rand(1..9))
+	end
+end

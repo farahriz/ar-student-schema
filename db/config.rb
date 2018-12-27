@@ -20,3 +20,16 @@ def seed_teachers
 end
 
 # seed_teachers
+
+def seed_students
+	Student.create(first_name: "Ruby", last_name: "Rose", gender: "Female", birthday: "06-06-2003", email: "40rrose@beacon.edu", phone: "556 123 1234")
+	Student.create(first_name: "Yang", last_name: "Xiao Long", gender: "Female", birthday: "06-12-2001", email: "40yxl@beacon.edu", phone: "556 123 1235")
+	Student.create(first_name: "Blake", last_name: "Belladonna", gender: "Female", birthday: "19-10-2001", email: "40bbelladonna@beacon.edu", phone: "556 123 1236")
+	Student.create(first_name: "Weiss", last_name: "Schnee", gender: "Female", birthday: "12-01-2002", email: "40wschnee@beacon.edu", phone: "556 123 1237")
+	Student.create(first_name: "Jaune", last_name: "de Arc", gender: "Male", birthday: "15-09-2000", email: "40jaunearc@beacon.edu", phone: "556 123 1238")
+	Student.create(first_name: "Pyhrra", last_name: "Nikos", gender: "Female", birthday: "17-08-2001", email: "40pnikos@beacon.edu", phone: "556 123 1239")
+	Student.create(first_name: "Lie", last_name: "Ren", gender: "Male", birthday: "23-11-2000", email: "40lren@beacon.edu", phone: "556 123 1240")
+	Student.create(first_name: "Nora", last_name: "Valkyrie", gender: "Female", birthday: "17-02-2000", email: "40norav@beacon.edu", phone: "556 123 1241")
+end
+
+# seed_students

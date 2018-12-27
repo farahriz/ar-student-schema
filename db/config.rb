@@ -2,6 +2,7 @@ require 'active_record'
 require_relative '../app/models/student.rb'
 require_relative '../app/models/subject.rb'
 require_relative '../app/models/teacher.rb'
+require_relative '../app/models/student_teacher.rb'
 
 ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :database => "#{File.dirname(__FILE__)}/../db/ar-students.sqlite3")
 
@@ -42,3 +43,15 @@ end
 	# 		current_student.update(teacher_id: rand(1..9))
 	# 	end
 	# end
+
+
+# Assigns a teacher to teacher to each student randomly for many-to-many relationship
+	def create_student_teacher_relationships
+		all_teachers = Teacher.all
+
+		for i in 1..62
+			StudentTeacher.create(student_id: i, teacher_id: all_teachers.sample.id)
+		end 
+		# StudentTeacher.create(student_id: 1, teacher_id: 1)
+	end
+
